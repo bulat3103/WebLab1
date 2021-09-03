@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/titleIcon.png">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Web lab №1</title>
+    </head>
+    <body>
+        <table id="main">
+            <tr>
+                <td id="header" colspan="2">
+                    <span class="leftItem">Khafizov Bulat Lenarovich (P3213)</span>
+                    <span class="rightItem">№13213</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="content" id="graph">
+                    <div class="plate_top">
+                        <h2 class="plate_top_title">Graph</h2>
+                    </div>
+                    <div class="graph_image">
+                        <img src="img/areas.png">
+                    </div>
+                </td>
+                <td class="content" id="values" rowspan="1">
+                    <div class="plate_top">
+                        <h2 class="plate_top_title">Values</h2>
+                    </div>
+                    <form id="input_form" action="" method="GET">
+                        <table id="input">
+                            <tr>
+                                <td class="input_label">
+                                    <label>X</label>
+                                </td>
+                                <td class="input_value">
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox1">-5</label>
+                                        <input class="x_checkbox" id="x_checkbox1" type="checkbox" name="xVal" value="-5">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox2">-4</label>
+                                        <input class="x_checkbox" id="x_checkbox2" type="checkbox" name="xVal" value="-4">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox3">-3</label>
+                                        <input class="x_checkbox" id="x_checkbox3" type="checkbox" name="xVal" value="-3">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox4">-2</label>
+                                        <input class="x_checkbox" id="x_checkbox4" type="checkbox" name="xVal" value="-2">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox5">-1</label>
+                                        <input class="x_checkbox" id="x_checkbox5" type="checkbox" name="xVal" value="-1">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox6">0</label>
+                                        <input class="x_checkbox" id="x_checkbox6" type="checkbox" name="xVal" value="0">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox7">1</label>
+                                        <input class="x_checkbox" id="x_checkbox7" type="checkbox" name="xVal" value="1">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox8">2</label>
+                                        <input class="x_checkbox" id="x_checkbox8" type="checkbox" name="xVal" value="2">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="x_label" for="x_checkbox9">3</label>
+                                        <input class="x_checkbox" id="x_checkbox9" type="checkbox" name="xVal" value="3">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input_label">
+                                    <label for="y_input">Y</label>
+                                </td>
+                                <td class="input_value">
+                                    <input id="y_input" type="text" name="yVal" maxlength="10" autocomplete="off" placeholder="Number from -3 to 3...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input_label">
+                                    <label>R</label>
+                                </td>
+                                <td class="input_values">
+                                    <div class="center_labeled">
+                                        <label class="rbox_label" for="r_radio1">1</label>
+                                        <input class="r_radio" id="r_radio1" type="radio" name="rVal" value="1">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="rbox_label" for="r_radio2">2</label>
+                                        <input class="r_radio" id="r_radio2" type="radio" name="rVal" value="2">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="rbox_label" for="r_radio3">3</label>
+                                        <input class="r_radio" id="r_radio3" type="radio" name="rVal" value="3">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="rbox_label" for="r_radio4">4</label>
+                                        <input class="r_radio" id="r_radio4" type="radio" name="rVal" value="4">
+                                    </div>
+                                    <div class="center_labeled">
+                                        <label class="rbox_label" for="r_radio5">5</label>
+                                        <input class="r_radio" id="r_radio5" type="radio" name="rVal" value="5">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <div class="buttons">
+                        <input class="button" type="submit" onclick="submit()" value="Submit">
+                        <input class="button" type="reset" value="Reset">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content" id="table" colspan="2">
+                    <div class="plate_top">
+                        <h2 class="plate_top_title">Table</h2>
+                    </div>
+                    <div class="scroll_container">
+                        <table id="resultTable">
+                            <tr class="table_header">
+                                <th class="coords_col">X</th>
+                                <th class="coords_col">Y</th>
+                                <th class="coords_col">R</th>
+                                <th class="time_col">Current time</th>
+                                <th class="time_col">Execution time</th>
+                                <th class="hitres_col">Hit result</th>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
