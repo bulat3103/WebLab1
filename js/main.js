@@ -73,9 +73,17 @@ function submit() {
                 newRow += '<td>' + elem.rVal + '</td>';
                 newRow += '<td>' + elem.curtime + '</td>';
                 newRow += '<td>' + elem.exectime + '</td>';
+                if (elem.validate) newRow += '<td>' + 'yes' + '</td>';
+                else newRow += '<td>' + 'no' + '</td>';
                 newRow += '<td>' + elem.hitres + '</td>';
                 $('#resultTable').append(newRow);
+                let key = localStorage.length + 1;
+                localStorage.setItem(key.toString(), newRow);
             });
         })
     }
+}
+
+for (let i = 1; i <= localStorage.length; i++) {
+    $('#resultTable').append(localStorage.getItem(i.toString()));
 }
